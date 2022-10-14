@@ -16,20 +16,18 @@ goal_1 = 54
 scorers = scorer_1 + " " + str(goal_0) + ", " + scorer_2 + " " + str(goal_1)
 
 
-report =  f'{(scorer_1)} scored in the {(goal_0)}nd minute\n{scorer_2} scored in the {goal_1}th minute'
+report =  f'{(scorer_1)} scored in the {(goal_0)}nd minute\n{scorer_2}\
+          scored in the {goal_1}th minute'
 
 
-player = scorer_1
+player = 'Ruud Gullit'
 
-start_first_name = player.find('R')
-end_first_name = player.find('d')
-first_name = player[start_first_name:end_first_name+1]
+end_first_name = player.find(' ')
+first_name = player[:end_first_name]
 first_name_len = len(first_name)
 
-
-start_last_name = player.find('G')
-end_last_name = player.find('t')
-last_name = player[ start_last_name:end_last_name+1]
+start_last_name = player.find(' ')
+last_name = player[start_last_name +1:]
 last_name_len = len(last_name)
 
 initial = player[0]
@@ -37,15 +35,11 @@ initial = player[0]
 name_short = initial+'.'+' '+last_name
 
 
-chant = f'{first_name}! ' * (first_name_len - 1) + f'{first_name}!'     #did i cheat?, what was the intended solution?
+chant = f'{first_name}! ' * (first_name_len - 1) + f'{first_name}!'     
+# Het is mij niet gelukt om dit in 1 f-string te krijgen, zou je een hint kunnen geven? 
 chant_len = len(chant)
 
 
-
-
-
-
 print(chant)
-print(chant_len)
-good_chant = chant[22] != ' '
+good_chant = chant[-1] != ' '
 print(good_chant)
