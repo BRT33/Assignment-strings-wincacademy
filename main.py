@@ -16,8 +16,7 @@ goal_1 = 54
 scorers = scorer_1 + " " + str(goal_0) + ", " + scorer_2 + " " + str(goal_1)
 
 
-report =  f'{(scorer_1)} scored in the {(goal_0)}nd minute\n{scorer_2}\
-          scored in the {goal_1}th minute'
+report =  f'{(scorer_1)} scored in the {(goal_0)}nd minute\n{scorer_2} scored in the {goal_1}th minute'
 
 
 player = 'Ruud Gullit'
@@ -35,8 +34,10 @@ initial = player[0]
 name_short = initial+'.'+' '+last_name
 
 
-chant = f'{first_name}! ' * (first_name_len - 1) + f'{first_name}!'     
-# Het is mij niet gelukt om dit in 1 f-string te krijgen, zou je een hint kunnen geven? 
+yell = f'{first_name}! ' * (first_name_len)
+chant = yell[0:-1]
+
+
 chant_len = len(chant)
 
 
